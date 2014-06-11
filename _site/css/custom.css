@@ -9,7 +9,7 @@ h1 {
 }
 
 section {
-	padding: 0; 
+	padding: 0;
 	min-height:calc(100% - 1px);
 }
 
@@ -17,16 +17,25 @@ section {
 #landing-page {
 	//background-color: #F1D9B5;
 	//background:url("../img/sprinkles.png");
-	color:#200705;
+	color:#F1D9B5;
+	background: url("../img/back_blur.jpg") 25% no-repeat fixed;
+	height: 100%;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+	-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
 }
 
 #landing-page a{
-	color:#200705;
+	color:#F1D9B5;
 	text-decoration: none;
 }
 
 #landing-page a:hover{
-	color: #A33246;
+	//color: #A33246;
 }
 
 #top-banner {
@@ -91,7 +100,7 @@ section {
 
 #content.affix{
 	position: relative;
-	padding-top: 170px;
+	padding-top: 70px;
 }
 
 #news {
@@ -132,7 +141,7 @@ section {
 	#top: - 10px;
 	height: 70px;
 	color: #200705;
-	background: url("../img/transparent70.png");
+	#background: url("../img/transparent70.png");
 	background-repeat:;
 	z-index: 10;
 }
@@ -142,10 +151,10 @@ section {
 }
 
 .navbar-inverse {
-	//background-color: #200705;
-	background:url("../img/pattern.png");
+	background-color: #200705;
+	#background:url("../img/pattern.png");
 	background-repeat:repeat-x;
-	background-size: 70px;
+	//background-size: 70px;
 	z-index: 10;
 	color: #200705;
 }
@@ -177,19 +186,19 @@ section {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 100px;
+	#height: 100px;
 	//padding-bottom: 400px;
 	#z-index:0;
 	z-index: 10;
 }
 
-		
+
 #imagewall {
 	position: relative;
 	width:100%;
 	height: 100%
 	margin-left:-15px;
-	
+
 }
 
 #instafeed {
@@ -218,7 +227,7 @@ section {
 .section-header {
 	padding-top: 20px;
 	border-bottom: 1px dotted;
-	
+
 }
 
 #members {
@@ -260,4 +269,27 @@ section {
 #top-link-block.affix a:hover{
 	color: #200705;
 	opacity: 0.7;
+}
+
+#separator{
+	background: url("../img/vue-directe.jpg") no-repeat fixed;
+	height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+	-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+#separator2{
+	background: url("../img/back.jpg") no-repeat fixed;
+	height: 100%;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+	-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
 }
