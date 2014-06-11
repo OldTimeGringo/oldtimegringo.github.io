@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Our Blog is Alive!"
+date:   2014-06-09 13:17:07
+categories: #oldtimegringo
+---
+
+## Our Blog is alive
+Please welcome our brand new blog.
+Old Time Gringo.
