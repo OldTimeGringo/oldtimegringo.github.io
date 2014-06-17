@@ -7,10 +7,10 @@ layout: home
   <div class="block-header">
     Posts</div>
     <div class="block-content">
-    <ul class="posts">
+    <ul class="list-unstyled">
       {% for post in site.posts limit:2%}
         <li>
-          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h3>{{ post.date | date: "%b %-d, %Y" }}</h3>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </li>
       {% endfor %}
