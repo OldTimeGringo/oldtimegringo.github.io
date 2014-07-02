@@ -15,6 +15,7 @@ section {
 
 
 #landing-page {
+	// vertical-align:middle;
 	//background-color: #F1D9B5;
 	//background:url("../img/sprinkles.png");
 	color:#F1D9B5;
@@ -22,7 +23,7 @@ section {
 	height: 100%;
 	margin: 0 auto;
 	width: 100%;
-	position: relative;
+	//position: relative;
 	-webkit-background-size: cover;
 				-moz-background-size: cover;
 				-o-background-size: cover;
@@ -39,21 +40,30 @@ section {
 }
 
 #top-banner {
+	vertical-align: top;
 	#left: 0;
-	position: absolute;
+	//position: absolute;
 	#top: 0;
 	background:url("../img/pattern.png");
 	background-repeat:repeat-x;
 	background-size: 70px;
 	//min-height: 50px;
-	min-height: 30%;
+	//min-height: 30%;
+	height: 35px;
 	#width:100%;
 }
+
+
 #logo {
+	
+	//display:inline-block !important;
+    //vertical-align: bottom;
+	line-height: 100%;
 	//position: relative;
 	//display: block;
-	margin-top: 7%;
-	//padding-top: 20px;
+	//margin-top: 7%;
+	//margin-top: -40px;
+	padding-top: 20px;
 	padding-bottom: 30px;
 	//background:url("../img/logoOTG.png" no-repeat);
 }
@@ -61,12 +71,13 @@ section {
 #social-links{
 	//position: relative;
 	border-top: 2px dotted;
-	display: block;
+	//display: block;
 	padding-top: 15px;
 	#padding-bottom: 30px;
 }
 
 #arrow {
+	vertical-align: bottom;
 	//display: block;
 	position: absolute;
 	bottom: 0;
@@ -75,7 +86,7 @@ section {
 	-moz-animation: bounce 2.5s linear infinite;
 }
 
- @-moz-keyframes bounce{
+ @keyframes bounce{
  from{bottom:1px;}
  //5%{bottom:2px;}
  10%{bottom:3px;}
@@ -134,17 +145,35 @@ section {
 	position: relative;
 	bottom: 0;
 }
-#nav {
-	#background:url("img/sprinkles.png");
-	#position: relative;
-	#left: 0;
-	#top: - 10px;
+
+.nav-pills {
+	float:right;
+	padding: 10px 10px 0 0;
+}
+
+#nav, #nav a {
+	font-weight: bold;
 	height: 70px;
-	color: #200705;
-	#background: url("../img/transparent70.png");
-	background-repeat:;
+	//padding-bottom: 20px;
+	color: #C0C0C0;
+	font-size: 15px;
 	z-index: 10;
 }
+
+#nav a:hover{
+	font-weight: bold;
+	background: none;
+	//background-color: #fff;
+	//background-size: 20px;
+	color: #000;
+}
+
+li.lin-active {
+	text-decoration:none;
+	background: none;
+	color: #ffffff;
+}
+
 .navbar-brand  img{
 	#padding-top: 7px;
 	padding: 5px;
@@ -184,14 +213,29 @@ section {
 
 #nav.affix {
 	position: fixed;
+	background-color: #fff;
 	top: 0;
 	width: 100%;
 	#height: 100px;
 	//padding-bottom: 400px;
 	#z-index:0;
 	z-index: 10;
+	-webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+#nav.affix a:hover {
+	color: #000;
 }
 
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
 
 #imagewall {
 	position: relative;
@@ -274,9 +318,9 @@ section {
 #separator{
 	background: url("../img/vue-directe.jpg") no-repeat fixed;
 	height: 100%;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
+	margin: 0 auto;
+	width: 100%;
+	//position: relative;
 	-webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
