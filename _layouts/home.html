@@ -8,7 +8,7 @@ title: Home
 
     <body>
     
-	<section id="landing-page" style="height:150%" data-speed="12" data-type="background">
+	<section id="landing-page" style="height:120%" data-speed="12" data-type="background">
     <div class="container-fluid">
       <div class="row">
         <div id="evian">
@@ -50,7 +50,7 @@ title: Home
         </div>
     </section>
 
-	 <div id="main2" style="background: url('{{ site.url }}/img/transparent70.png'); background-repeat;" data-speed="8" data-type="background">
+	 <div id="main2" style="background: url('{{ site.url }}/img/transparent70.png'); background-repeat;" data-speed="0" data-type="background">
 		<div class="container-fluid">
 			<div id="bio" class="row">
         <div id="top-banner" class="col-md-12"></div>
@@ -82,57 +82,39 @@ title: Home
 				</div>
 		</div>
     </div>
-	
-	
-    
+	 
 
-    <section id="separator" data-speed="6" data-type="background">
+    <section id="separator" data-speed="-200" data-type="background">o
     </section> 
 
-    <section id="main">
-
-
-	  
-    <!--  <div class="nav-wrapper">
-      <div id="nav">
-      <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="container">
-        <div class="row">
-
-        <div class="col-md-12">
-        
-          <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="glyphicon glyphicon-bar"></span>
-                    <span class="glyphicon glyphicon-bar"></span>
-                    <span class="glyphicon glyphicon-bar"></span>
-          </a>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-            <li class="divider"></li>
-            <li><a href="{{ site.url }}#main">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/music">Music</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/gigs">Gigs</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/shop"> <span class="fa fa-shopping-cart"></span> Store</a></li>
-            </ul>
-            <ul class="nav pull-right navbar-nav">
-          </div>
-        </div>
-        </div>
-      </div>
-      </div>
-      </div> -->
-      <!-- End Navbar -->
-
+    <div id="main2" style="background: url('{{ site.url }}/img/transparent70.png'); background-repeat;" data-speed="8" data-type="background">
+		<div class="container-fluid">
+			<div id="blog" class="row">
+				<div id="top-banner" class="col-md-12"></div>
+				<div class="col-md-10 block-content col-md-offset-1" style="margin-top: 40px">
+					<h1>Actualit&#233;s</h1>
+				</div>
+				<div class="col-md-10 block-content col-md-offset-1" style="margin-top: 30px">
+					{{ content }}
+				</div>
+				<div class="col-md-10 block-content col-md-offset-1">
+				<a style="float: right; padding-bottom: 30px; font-weight: bold;" href="{{ site.url }}/blog/"><span class="fa fa-ellipsis-h"> </span> Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<section id="separator" data-speed="100" data-type="background">
+    </section> 
+	
+	<section>
       <div class="page-content" data-speed="8" data-type="background">
         <div id="content" class="container">
 			       <div class="row">
 				           <div id="latest-news" class="col-md-12">
 					              <div id="news">
                           <div class="wrap">
-                              {{ content }}
+                              
                           </div>
                         </div>
 
@@ -167,23 +149,12 @@ title: Home
         						</div>
         					</div>
                 </div>
-				<div id="twitter-feed" class="col-md-4">
-					<div class="block-header">
-						Twitter Feed
-					</div>
-					<div class="col-md-12">
-  					<a class="twitter-timeline"  href="https://twitter.com/search?q=%23indierock"  data-widget-id="465104169670410240">Tweets concernant "#indierock"</a>
-            <script>!function(d,s,id){
-              var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');
-            </script>
-					</div>
-
-				</div>
+				
 			</div>
 		</div>
   </div>
     </section>
-    <section id="separator2" data-speed="8" data-type="background">
+    <section id="separator2" data-speed="500" data-type="background">
     </section>
     <div id="newsletter">
 		<div class="container">

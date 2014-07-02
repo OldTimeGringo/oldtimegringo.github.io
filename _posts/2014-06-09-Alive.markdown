@@ -5,6 +5,8 @@ date:   2014-06-09 13:17:07
 categories: #oldtimegringo
 ---
 
-## Our Blog is alive
-Please welcome our brand new blog.
+**Our Blog is alive**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut dui fermentum, posuere orci dignissim, consequat risus. Proin eu mattis mauris. Sed vitae scelerisque mauris, et eleifend odio. Quisque aliquam ante vel leo sollicitudin, eget lacinia dolor condimentum.
+
 Old Time Gringo.

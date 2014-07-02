@@ -3,16 +3,19 @@ layout: home
 ---
 
 <div class="home">
-
-  <div class="block-header">
-    Posts</div>
-    <div class="block-content">
+ 
     <ul class="list-unstyled">
       {% for post in site.posts limit:2%}
-        <li>
-          <h3>{{ post.date | date: "%b %-d, %Y" }}</h3>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
+        <li style="padding-bottom: 10px;">
+			<h3>
+			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br/>
+			<small>{{ post.date | date: "%b %-d, %Y" }}</small>
+			</h3>
+        
+			<div style="padding-left: 30px">
+				{{ post.content }}
+			</div>
+		</li>
       {% endfor %}
     </ul>
 </div>
