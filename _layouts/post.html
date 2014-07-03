@@ -13,7 +13,7 @@ layout: default
 			</div>
 			<header class="post-header col-md-10 block-content col-md-offset-1">
 				<h1>{{ page.title }}</h1>
-				<p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+				<h4 style="color:#C0C0C0" class="meta"><span style="padding-right: 5px;" class="fa fa-clock-o"> </span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} <span class="fa fa-comment" style="padding-left: 10px; padding-right: 5px; color:#AF6732;"> </span> <a class="post-link" style="color:#AF6732; " href="#disqus_thread" data-disqus-identifier="{{page.id}}"></a></h4>
 			</header>
 
 			<article class="post-content col-md-10 block-content col-md-offset-1" style="margin-top: 30px">
@@ -22,6 +22,7 @@ layout: default
 				<script type="text/javascript">
 					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 					var disqus_shortname = 'oldtimegringo'; // required: replace example with your forum shortname
+					var disqus_identifier = '{{ page.id }}';
 
 					/* * * DON'T EDIT BELOW THIS LINE * * */
 					(function() {
