@@ -124,18 +124,21 @@ section {
 	position: relative;
 	#height: 30%;
 	width: 100%;
-	padding-top: 15px;
-	padding-bottom: 5px;
-	background-color: #200705;
-	color: #F1D9B5;
+	//padding-top: 30px;
+	padding-bottom: 30px;
+	//background-color: #200705;
+	background-color: #6982A0;
+	//color: #F1D9B5;
+	color: #FFFFFF;
 	font-size: 16px;
 	//z-index:10;
 	bottom: 0;
 }
 
 .footer a{
-	color: #F1D9B5;
-	font-size: 13px;
+	//color: #F1D9B5;
+	color: #E6E6E6;
+	//font-size: 12px;
 	text-decoration: none;
 }
 .footer a:hover{
@@ -144,7 +147,8 @@ section {
 
 #social-footer {
 	position: relative;
-	bottom: 0;
+	padding-top: 30px;
+	//bottom: 0;
 }
 
 .nav-pills {
@@ -348,4 +352,8 @@ li.lin-active {
 p {
 	font-family: 'Fjord One', serif;
 	font-size: 18px;
+}
+
+#footer {
+	display: none !important;
 }
