@@ -4,7 +4,7 @@ email: contact@oldtimegringo.com
 description: "Old Time Gringo Official Website"
 baseurl: ""
 #url: "http://localhost:4000"
-url: "oldtimegringo.com"
+#url: "oldtimegringo.com"
 
 # Build settings
 paginate: 2
