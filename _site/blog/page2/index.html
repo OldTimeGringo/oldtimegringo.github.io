@@ -75,7 +75,7 @@
         <div id="biobio" style="bottom: 20px;"></div>
     </section>
 
-	 <div id="main2" style="background: url('/img/transparent70.png'); background-repeat;" data-speed="0" data-type="background">
+	 <div id="main2">
 		<div class="container-fluid">
 			<div id="bio" class="row">
         <div id="top-banner" class="col-md-12"></div>
@@ -109,10 +109,10 @@
     </div>
 
 
-    <div id="separator" data-speed="-200" data-type="background" style="height:75%;">
+    <div id="separator" data-speed="10" data-type="background" style="height:75%;">
     </div>
 
-    <div id="main2" style="background: url('/img/transparent70.png'); background-repeat;" data-speed="8" data-type="background">
+    <div id="main2">
 		<div class="container-fluid">
 			<div id="blog" class="row">
 				<div id="top-banner" class="col-md-12"></div>
@@ -177,11 +177,11 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 		</div>
 	</div>
 
-	<div id="separator" data-speed="100" data-type="background" style="height:75%;">
+	<div id="separator" data-speed="40" data-type="background" style="height:75%;">
   </div>
 
 	<section>
-      <div class="page-content" data-speed="8" data-type="background">
+      <div class="page-content">
         <div class="container-fluid">
 			       <div class="row">
               <div id="top-banner" class="col-md-12"></div>
@@ -222,7 +222,7 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 		</div>
   </div>
     </section>
-    <div id="separator2" data-speed="500" data-type="background" style="height:75%;">
+    <div id="separator2" data-speed="55" data-type="background" style="height:75%;">
     </div>
   <!--  <div id="newsletter">
 		<div class="container">
@@ -283,7 +283,7 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 							<li><a href="www.soundcloud.com/old-time-gringo">Soundcloud</a></li>
 						</ul>
 					</div>
-<div class="col-md-2">
+<div class="col-md-3">
 <form action="//oldtimegringo.us8.list-manage.com/subscribe/post?u=67008fcef16a7cf11781a6d48&amp;id=7f6fa63d2c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-horizontal" role="form" target="_blank" novalidate>
 	<label for="mce-EMAIL">Subscribe to our mailing list</label>
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
@@ -376,6 +376,30 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 
     </script>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+     // cache the window object
+     $window = $(window);
+
+     $('div[data-type="background"]').each(function(){
+       // declare the variable to affect the defined data-type
+       var $scroll = $(this);
+
+        $(window).scroll(function() {
+          // HTML5 proves useful for helping with creating JS functions!
+          // also, negative value because we're scrolling upwards
+          var yPos = -($window.scrollTop() / $scroll.data('speed'));
+
+          // background position
+          var coords = '50% '+ yPos + 'px';
+
+          // move the background
+          $scroll.css({ backgroundPosition: coords });
+        }); // end window scroll
+     });  // end section function
+  }); // close out script
+
+</script>
 
     </body>
 </html>

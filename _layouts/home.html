@@ -51,7 +51,7 @@ title: Home
         <div id="biobio" style="bottom: 20px;"></div>
     </section>
 
-	 <div id="main2" style="background: url('{{ site.url }}/img/transparent70.png'); background-repeat;" data-speed="0" data-type="background">
+	 <div id="main2">
 		<div class="container-fluid">
 			<div id="bio" class="row">
         <div id="top-banner" class="col-md-12"></div>
@@ -85,10 +85,10 @@ title: Home
     </div>
 
 
-    <div id="separator" data-speed="-200" data-type="background" style="height:75%;">
+    <div id="separator" data-speed="10" data-type="background" style="height:75%;">
     </div>
 
-    <div id="main2" style="background: url('{{ site.url }}/img/transparent70.png'); background-repeat;" data-speed="8" data-type="background">
+    <div id="main2">
 		<div class="container-fluid">
 			<div id="blog" class="row">
 				<div id="top-banner" class="col-md-12"></div>
@@ -105,11 +105,11 @@ title: Home
 		</div>
 	</div>
 
-	<div id="separator" data-speed="100" data-type="background" style="height:75%;">
+	<div id="separator" data-speed="40" data-type="background" style="height:75%;">
   </div>
 
 	<section>
-      <div class="page-content" data-speed="8" data-type="background">
+      <div class="page-content">
         <div class="container-fluid">
 			       <div class="row">
               <div id="top-banner" class="col-md-12"></div>
@@ -150,7 +150,7 @@ title: Home
 		</div>
   </div>
     </section>
-    <div id="separator2" data-speed="500" data-type="background" style="height:75%;">
+    <div id="separator2" data-speed="55" data-type="background" style="height:75%;">
     </div>
   <!--  <div id="newsletter">
 		<div class="container">
@@ -259,6 +259,30 @@ title: Home
 
     </script>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+     // cache the window object
+     $window = $(window);
+
+     $('div[data-type="background"]').each(function(){
+       // declare the variable to affect the defined data-type
+       var $scroll = $(this);
+
+        $(window).scroll(function() {
+          // HTML5 proves useful for helping with creating JS functions!
+          // also, negative value because we're scrolling upwards
+          var yPos = -($window.scrollTop() / $scroll.data('speed'));
+
+          // background position
+          var coords = '50% '+ yPos + 'px';
+
+          // move the background
+          $scroll.css({ backgroundPosition: coords });
+        }); // end window scroll
+     });  // end section function
+  }); // close out script
+
+</script>
 
     </body>
 </html>
