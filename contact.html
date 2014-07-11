@@ -16,17 +16,17 @@ title: Contact
 				<p class="text-justify" style="padding-bottom: 20px;">Please don't hesitate to contact us if you have any questions, comments or messages. </br>Promise, we'll try to respond to everything :-)</p>
 				</div>
 				<div class="col-md-10 col-md-offset-1 block-content" style="margin-bottom: 30px;">
-					<form class="form-horizontal" role="form">
+					<form action="//forms.brace.io/contact@oldtimegringo.com" method="post" enctype="text/plain" class="form-horizontal" role="form">
 						<div class="form-group">
 					    <label for="inputName" class="col-sm-2 control-label">Name</label>
 					    <div class="col-sm-4">
-					      <input type="name" class="form-control" id="inputName" placeholder="Name">
+					      <input type="name" name="name" class="form-control" id="inputName" placeholder="Name">
 					    </div>
 					  </div>
 						<div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 					    <div class="col-sm-4">
-					      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+					      <input type="email" name="_replyto" class="form-control" id="inputEmail3" placeholder="Email">
 					    </div>
 					  </div>
 					  <div class="form-group">
@@ -38,12 +38,12 @@ title: Contact
 					  <div class="form-group">
 					    <label for="inputMessage" class="col-sm-2 control-label">Message</label>
 					    <div class="col-sm-4">
-					      <textarea type="message" class="form-control" rows="5" id="inputMessage"></textarea>
+					      <textarea type="message" name="message" class="form-control" rows="5" id="inputMessage"></textarea>
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <div class="col-sm-offset-5 col-sm-1">
-					      <button type="submit" class="btn btn-default"><span class="fa fa-send"></span> <strong>Send <//							strong></button>
+					      <button type="submit" value="send" class="btn btn-default"><span class="fa fa-send"></span> <strong>Send <//							strong></button>
 					    </div>
 					  </div>
 					</form>
