@@ -360,7 +360,7 @@ li.lin-active {
     vertical-align: middle !important;
 }
 
-p {
+p, ol {
 	font-family: 'Fjord One', serif;
 	font-size: 18px;
 }
