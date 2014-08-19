@@ -7,41 +7,46 @@ title: Contact
 
 	<section id="main2" style="margin-bottom: 40px">
 		<div class="container-fluid">
-			<div id="bio" class="row">
+			<div class="row">
+
 				<div id="top-banner" class="col-md-12"></div>
+
 				<div class="col-md-10 col-md-offset-1" style="margin-top: 40px">
-				<h1>	<span class="fa fa-inbox"></span>   Contact</h1>
+					<h1>	<span class="fa fa-inbox"></span>   Contact</h1>
 				</div>
+
 				<div class="col-md-9 col-md-offset-1 block-content">
-				<p class="text-justify" style="padding-bottom: 20px;">Please don't hesitate to contact us if you have any questions, comments or messages. </br>Promise, we'll try to respond to everything :-)</p>
+					<p class="text-justify" style="padding-bottom: 20px;">Please don't hesitate to contact us if you have any questions, comments or messages. </br>Promise, we'll try to respond to everything :-)</p>
 				</div>
+
 				<div class="col-md-10 col-md-offset-1 block-content" style="margin-bottom: 30px;">
-					<form action="//forms.brace.io/contact@oldtimegringo.com" method="post" enctype="text/plain" class="form-horizontal" role="form">
-						<div class="form-group">
+					<form id="myForm" action="http://oldtimegringo.free.fr/mail.php" method="post" class="form-horizontal" role="form">
+						<div id="nameForm" class="form-group">
 					    <label for="inputName" class="col-sm-2 control-label">Name</label>
 					    <div class="col-sm-4">
-					      <input type="name" name="name" class="form-control" id="inputName" placeholder="Name">
+					      <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Name">
 					    </div>
 					  </div>
-						<div class="form-group">
+						<div id="emailForm" class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 					    <div class="col-sm-4">
-					      <input type="email" name="_replyto" class="form-control" id="inputEmail3" placeholder="Email">
+					      <input type="email" name="inputEmail" class="form-control" id="inputEmail" placeholder="Email">
 					    </div>
 					  </div>
-					  <div class="form-group">
+					  <div id="subjectForm" class="form-group">
 					    <label for="inputSubject" class="col-sm-2 control-label">Subject</label>
 					    <div class="col-sm-4">
-					      <input type="subject" class="form-control" id="inputSubject" placeholder="Subject">
+					      <input type="text" name="inputSubject" class="form-control" id="inputSubject" placeholder="Subject">
 					    </div>
 					  </div>
-					  <div class="form-group">
-					    <label for="inputMessage" class="col-sm-2 control-label">Message</label>
+					  <div id="messageForm" class="form-group">
+					    <label for="message" class="col-sm-2 control-label">Message</label>
 					    <div class="col-sm-4">
-					      <textarea type="message" name="message" class="form-control" rows="5" id="inputMessage"></textarea>
+					      <textarea name="inputMessage" class="form-control" rows="5" id="inputMessage"></textarea>
 					    </div>
 					  </div>
-					  <div class="form-group">
+					  <div id="success"></div>
+						<div class="form-group">
 					    <div class="col-sm-offset-5 col-sm-1">
 					      <button type="submit" value="send" class="btn btn-default"><span class="fa fa-send"></span> <strong>Send <//							strong></button>
 					    </div>
@@ -49,4 +54,68 @@ title: Contact
 					</form>
 				</div>
 			</div>
-    </section>
+		</div>
+  </section>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('#myForm').on('submit', function(e) {
+        e.preventDefault();
+
+        var $this = $(this);
+
+
+        var inputName = $('#inputName').val();
+        var inputSubject = $('#inputSubject').val();
+				var inputMessage = $('#inputMessage').val();
+				var inputEmail = $('#inputEmail').val();
+
+				if(inputMessage === '') {
+					$('#messageForm').closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+				}
+
+				if(inputMessage !== '') {
+					$('#messageForm').closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+				}
+
+        if(inputName === '') {
+					$('#nameForm').closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+				}
+
+				if(inputName !== '') {
+					$('#nameForm').closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+				}
+
+				if(inputEmail === '') {
+						$('#emailForm').closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+				}
+
+				if(inputEmail !== '') {
+						$('#emailForm').closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+				}
+
+				if(inputSubject === '') {
+            $('#subjectForm').closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+        }
+
+				if(inputSubject !== '') {
+						$('#subjectForm').closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+				}
+
+				if(inputSubject !== '' && inputEmail !== '' && inputName !== '' && inputMessage !== '') {
+
+            $.ajax({
+                url: $this.attr('action'),
+                type: $this.attr('method'),
+                data: $this.serialize(),
+                success: function() {
+                    $('#success').html("<div class='alert alert-success'>");
+ 									$('#success > .alert-success').html('<button class="close" type="button" data-dismiss="alert">×').append("</button>");
+ 								$('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
+ 							$('#success > .alert-success').append('</div>');
+                }
+            });
+        }
+    });
+});
+</script>
