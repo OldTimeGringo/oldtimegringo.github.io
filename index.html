@@ -1,22 +1,186 @@
----
-layout: home
----
+<!DOCTYPE html>
 
-<div class="home">
- 
-    <ul class="list-unstyled">
-      {% for post in site.posts limit:2%}
-        <li style="padding-bottom: 10px;">
-			<h3>
-			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br/>
-			<small>{{ post.date | date: "%b %-d, %Y" }}</small>
-			</h3>
-        
-			<div style="padding-left: 30px">
-				{{ post.content }}
-			</div>
-		</li>
-      {% endfor %}
-    </ul>
+<html  lang="fr">
+<head>
+  <!-- title and meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0" name="viewport">
+  <meta content="description" name="Old Time Gringo est un groupe d'Indie Pop/Rock originaire de Paris. Visitez notre site web pour plus d'information, de musiques et de concerts.">
+
+  <title>Old Time Gringo // Indie Pop Rock Music Band</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- js -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/navigation.js"></script>
+  <script type="text/javascript" src="js/analytics.js"></script>
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+
+<body id="homepage">
+<div id="page">
+
+<div id="header">
+   <div id="logoContainer">
+        <div id="logoBottom"></div>
+        <div id="logoTop"></div>
+   </div>
+
+   <div id="headerContainer" class="" style="display: block;">
+        <div id="nav">
+           <ul>
+              <li><a href="#slide1" class="newsLink">News</a></li>
+              <li><a href="#slide2" class="musicLink">Music</a></li>
+              <li><a href="#slide3" class="liveLink">About</a></li>
+              <li><a href="#slide4" class="liveLink">Live</a></li>
+              <li><a href="#slide5" class="liveLink">Video</a></li>
+              <li><a href="#slide6" class="contactLink">Contact</a></li>
+            </ul>
+         </div> <!-- end #navigation -->
+
+         <div id="sns">
+            <ul>
+              <li><a target="_blank" href="https://www.facebook.com/oldtimegringo" id="facebook"></a></li>
+              <li><a target="_blank" href="https://instagram.com/oldtimegringo/" id="instagram"></a></li>
+              <li><a target="_blank" href="https://www.youtube.com/channel/UCVbQhNxiL8TON0yaBKb3jog" id="youtube"></a></li>
+              <li><a target="_blank" href="https://soundcloud.com/old-time-gringo" id="soundcloud"></a></li>
+              <li><a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E" id="spotify"></a></li>
+              <li><a target="_blank" href="http://www.deezer.com/artist/7648046" id="deezer"></a></li>
+              <li><a target="_blank" href="https://itunes.apple.com/us/artist/old-time-gringo/id974765573" id="itunes"></a></li>
+            </ul>
+          </div>
+
+
+   </div>
+    <div id="godown"><a href="#stopscroll"><img src="images/play.png"></a></div>
+</div>  <!--header-->
+
+<div class="triangleLeft"></div>
+<div class="triangleRight"></div>
+
+
+<div name="stopscroll" id="slide1" class="news-block">
+  <h1>news.</h1>
+  <div class="news" ><a target="_blank" href="http://www.deezer.com/album/9839328"><img src="images/Deezer.jpg"></a><p>Old Time Gringo arrive sur <a target="_blank" href="http://www.deezer.com/album/9839328">Deezer</a></br><strong>02/03/2015</strong></p></div>
+  <div class="news" ><a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E"><img src="images/spotifythumb.jpg"></a><p>Old Time Gringo arrive sur <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a></br><strong>02/03/2015</strong></p></div>
+  <div class="news"><a target="_blank" href=""><img src="images/CoverEPsmall.jpg"></a><p>Premier EP pour Old Time Gringo <a target="_blank" href="#album">écoutes le</a> gratuitement</br><strong>02/03/2015</strong></p></div>
 </div>
+
+
+<div name="album" id="slide2" class="album-block">
+  <h1>music.</h1>
+  <p>Découvrez le premier EP d'Old Time Gringo <strong> #1 </strong><br/> Disponible en écoute sur
+    <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a>,
+    <a target="_blank" href="http://www.deezer.com/artist/7648046">Deezer</a>,
+    <a target="_blank" href="https://soundcloud.com/old-time-gringo">Soundcloud</a> et
+    <a target="_blank" href="https://itunes.apple.com/us/artist/old-time-gringo/id974765573">iTunes</a>! <br/>
+    Et comme on vous aime beaucoup, on a carrément décidé de vous l'offrir gratuitement ! <3 <br/>
+    <button class="button" type="button" onClick="window.open('https://www.mediafire.com/folder/8wbfp4367iz66/Old_Time_Gringo_-_%231_(2015)')">Télécharger</button>
+  </p>
+
+  <div id="player">
+    <img src="images/coverEPmid.jpg" alt="#1">
+    <iframe style="border: 0; width: 50%; height: 307px;" src="https://bandcamp.com/EmbeddedPlayer/album=3732449303/size=large/bgcol=ffffff/linkcol=25938F/artwork=none/transparent=true/" seamless><a href="http://oldtimegringo.bandcamp.com/album/1">#1 by Old Time Gringo</a></iframe>
+	</div>
+	<h5>Produit par Old Time Gringo</h5>
 </div>
+
+
+<div id="slide3">
+  <div class="bio-block">
+      <h1>biographie.</h1>
+        <p> Old Time Gringo est un groupe Indie-Rock Pop formé à Paris en 2014.</p>
+        <p> Notre musique, nous la voulons différente. La batterie de Zeppelin, la basse de Cinema Club et les guitares des Chili Peppers : ala Old Time Gringo.<br> Formé en 2014 à Paris, nous avons écumé les scènes d'Ile de France avant de sortir notre premier EP en Mars 2015.</p>
+
+	    <div class="bio-img">
+    	  <img src="images/otg1.jpg">
+    	  <img src="images/otg2.jpg">
+    	  <img src="images/otg3.jpg">
+	    </div>
+  </div>
+</div>
+
+
+<div id="slide4" class="live-block">
+    <h1>concerts.</h1>
+    <table class="live-table" cellspacing="0" cellpadding="0">
+      <colgroup>
+        <col style="width: 20%">
+        <col style="width: 40%">
+        <col style="width: 40%">
+      </colgroup>
+      <tr>
+        <th class="live-table-titre">Date</th>
+        <th class="live-table-titre">Lieu</th>
+        <th class="live-table-titre">Information</th>
+      </tr>
+      <tr class="table-line">
+        <td class="live-table-ligne">05/03/2015</td>
+        <td class="live-table-ligne">Abracadabar, Paris (FR)</td>
+        <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/1575148922721661/" class="button live-getticket">More</a></td>
+      </tr>
+
+      <tr class="table-line">
+        <td class="live-table-ligne">19/02/2015</td>
+        <td class="live-table-ligne">La Cantine de Belleville, Paris (FR)</td>
+        <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/820338141372361/" class="button live-getticket">More</a></td>
+      </tr>
+
+      <tr class="table-line">
+        <td class="live-table-ligne">25/10/2014</td>
+        <td class="live-table-ligne">Gibus Café, Paris (FR)</td>
+        <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
+      </tr>
+
+      <tr class="table-line">
+        <td class="live-table-ligne">09/08/2014</td>
+        <td class="live-table-ligne">Lille (FR)</td>
+        <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
+      </tr>
+    </table>
+</div>
+
+
+<div id="slide5" class="video-block">
+    <h1>video.</h1>
+    <h4>Doppler's Odyssey</h4>
+    <div id="videoframe">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6AKwcp3m8Bg" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h5>Écrit, Créé et Réalisé par Old Time Gringo</h5>
+</div> <!--end container-->
+
+
+<div id="slide6" class="newsletter-block">
+  <h1>contact.</h1>
+  <p> Pour toute demande, n'hésitez pas à nous envoyer un message en utilisant le formulaire ci-dessous.
+  <br/> On sera ravi de vous répondre !</p>
+
+  <form action="http://oldtimegringo.free.fr/mail.php" target="hidden-form" method="post" role="form">
+    <input name="inputName" id="inputName" type="text" class="feedback-input" placeholder="Nom" />
+    <input name="inputEmail" id="inputEmail" type="text" class="feedback-input" placeholder="Email" />
+    <select name="inputSubject" id="inputSubject" class="feedback-input" placeholder="Statut">
+      <option>Presse</option>
+      <option>Booking</option>
+      <option>Autre</option>
+    </select>
+    <textarea name="inputMessage" class="feedback-input" placeholder="Message"></textarea>
+    <input id="submitmsg" id="inputMessage" type="submit" value="Envoyer"/>
+  </form>
+</div>
+
+
+<div id="slide7">
+    <div class="footer_img">
+      <img class="footer_img" src="images/otg_little.jpg">
+    </div>
+      <h5>© Old Time Gringo 2015</br>Website designed and developed by Old Time Gringo</h5>
+</div>
+
+</div>
+</body>
+</html>
