@@ -475,7 +475,8 @@ text-align: center;
   border:2px solid #333333;
   transition: all 0.3s;
   padding: 13px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width:100%;
   box-sizing: border-box;
   outline:0;
@@ -522,9 +523,17 @@ select {
   padding-top:10px;
   padding-bottom:10px;
   transition: all 0.3s;
-  margin-top:-4px;
+  margin-top:10px;
+  margin-bottom:10px;
   font-weight:700;
 }
+
+.error{
+  color: #990000;
+  font-weight: bold;
+  border-color: #990000;
+}
+.error label{ padding: 40px 40px 40px 40px;}
 #submitmsg:hover { background:#556B2F; }
 #confirm{display:none; color:#556B2F;font-size:15px;font-weight:700; text-align: center; padding-top: 20px;}
 .footer_img {text-align: center; width : 100%; display: inline-block;}

@@ -18,29 +18,8 @@
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/navigation.js"></script>
   <script type="text/javascript" src="js/analytics.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
   <link rel="shortcut icon" href="images/favicon.ico">
-
-  <script>
-        $(function () {
-          $('form').on('submit', function (e) {
-                $('#submitmsg').css({"background":"#333333"})
-                e.preventDefault();
-
-                $.ajax({
-                type: 'post',
-                url: 'http://oldtimegringo.free.fr/mail.php',
-                data: $('form').serialize(),
-                success: function () {
-                  $('#form')[0].reset();
-                  $('#confirm').show();
-                  $('#submitmsg').css({"background":"#7D934C"});
-                  $('#confirm').delay(2000).fadeOut(1000);
-                }
-              });
-            });
-        });
-  </script>
-
 </head>
 
 <body id="homepage">
@@ -207,5 +186,62 @@
 </div>
 
 </div>
+
+<script>
+$(document).ready(function () {
+  $('#form').validate({
+    rules: {
+      inputName: {
+        required: true,
+        minlength: 5
+      },
+      inputEmail: {
+        required: true,
+        email: true
+      },
+      inputMessage: {
+        required: true
+      }
+    },
+    submitHandler: function (form) {
+      $('#submitmsg').css({"background":"#333333"})
+      //e.preventDefault();
+      $.ajax({
+        type: 'post',
+        url: 'http://oldtimegringo.free.fr/mail.php',
+        data: $('form').serialize(),
+        success: function () {
+          $('#form')[0].reset();
+          $('#confirm').show();
+          $('#submitmsg').css({"background":"#7D934C"});
+          $('#confirm').delay(2000).fadeOut(1000);
+        }
+      });
+    }
+  });
+});
+</script>
+
+<!--<script>
+$(function () {
+    $('form').on('submit', function (e) {
+          $('#submitmsg').css({"background":"#333333"})
+          e.preventDefault();
+
+          $.ajax({
+          type: 'post',
+          url: 'http://oldtimegringo.free.fr/mail.php',
+          data: $('form').serialize(),
+          success: function () {
+            $('#form')[0].reset();
+            $('#confirm').show();
+            $('#submitmsg').css({"background":"#7D934C"});
+            $('#confirm').delay(2000).fadeOut(1000);
+          }
+        });
+      });
+  });
+</script>-->
+
 </body>
 </html>
