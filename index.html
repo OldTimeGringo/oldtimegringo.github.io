@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html  lang="fr">
+<html>
 <head>
   <!-- title and meta -->
   <meta charset="utf-8">
@@ -20,6 +20,17 @@
   <script type="text/javascript" src="js/analytics.js"></script>
   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
   <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- Language Detection -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var known = { en: true, fr: true };
+      var lang  = (navigator.language || navigator.userLanguage || 'en').substr(0, 2);
+      if(!known[lang])
+          lang = 'en';
+          $('div.wrap[lang='  + lang + ']').show();
+          $('div.wrap[lang!=' + lang + ']').hide();
+    });
+  </script>
 </head>
 
 <body id="homepage">
@@ -66,38 +77,82 @@
 
 <div name="stopscroll" id="slide1" class="news-block">
   <h1>news.</h1>
-  <div class="news" ><a target="_blank" href="http://www.deezer.com/album/9839328"><img src="images/deezer.jpg"></a><p>Old Time Gringo arrive sur <a target="_blank" href="http://www.deezer.com/album/9839328">Deezer</a></br><strong>02/03/2015</strong></p></div>
-  <div class="news" ><a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E"><img src="images/spotifythumb.jpg"></a><p>Old Time Gringo arrive sur <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a></br><strong>02/03/2015</strong></p></div>
-  <div class="news"><a target="_blank" href=""><img src="images/CoverEPsmall.jpg"></a><p>Premier EP pour Old Time Gringo <a target="_blank" href="#album">écoutes le</a> gratuitement</br><strong>02/03/2015</strong></p></div>
+  <div class="news wrap" lang="fr" >
+    <a target="_blank" href="http://www.deezer.com/album/9839328"><img src="images/deezer.jpg"></a>
+    <p>Old Time Gringo arrive sur <a target="_blank" href="http://www.deezer.com/album/9839328">Deezer</a></br><strong>02/03/2015</strong></p>
+  </div>
+  <div class="news wrap" lang="en">
+    <a target="_blank" href="http://www.deezer.com/album/9839328"><img src="images/deezer.jpg"></a>
+    <p>Old Time Gringo is now available on <a target="_blank" href="http://www.deezer.com/album/9839328">Deezer</a></br><strong>02/03/2015</strong></p>
+  </div>
+  <div class="news wrap" lang="fr" >
+    <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E"><img src="images/spotifythumb.jpg"></a>
+    <p lang="fr">Old Time Gringo arrive sur <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a></br><strong>02/03/2015</strong></p>
+  </div>
+  <div class="news wrap" lang="en">
+    <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E"><img src="images/spotifythumb.jpg"></a>
+    <p lang="en">Old Time Gringo is now available on <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a></br><strong>02/03/2015</strong></p>
+  </div>
+  <div class="news wrap" lang="fr">
+    <a target="_blank" href=""><img src="images/CoverEPsmall.jpg"></a>
+    <p lang="fr">Premier EP pour Old Time Gringo <a target="_blank" href="#album">écoutes le</a> gratuitement</br><strong>02/03/2015</strong></p>
+  </div>
+  <div class="news wrap" lang="en">
+    <a target="_blank" href=""><img src="images/CoverEPsmall.jpg"></a>
+    <p lang="en">Old Time Gringo just releases its first EP! <a target="_blank" href="#album">Listen and grab your copy for free</a></br><strong>02/03/2015</strong></p>
+  </div>
 </div>
 
 
 <div name="album" id="slide2" class="album-block">
   <h1>music.</h1>
-  <p>Découvrez le premier EP d'Old Time Gringo <strong> #1 </strong><br/> Disponible en écoute sur
-    <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a>,
-    <a target="_blank" href="http://www.deezer.com/artist/7648046">Deezer</a>,
-    <a target="_blank" href="https://soundcloud.com/old-time-gringo">Soundcloud</a> et
-    <a target="_blank" href="https://itunes.apple.com/us/artist/old-time-gringo/id974765573">iTunes</a>! <br/>
-    Et comme on vous aime beaucoup, on a carrément décidé de vous l'offrir gratuitement ! <3 <br/>
-    <button class="button" type="button" onClick="window.open('https://www.mediafire.com/folder/8wbfp4367iz66/Old_Time_Gringo_-_%231_(2015)')">Télécharger</button>
-  </p>
-
+  <div class="wrap" lang="fr">
+    <p>Découvrez le premier EP d'Old Time Gringo <strong> #1 </strong><br/> Disponible en écoute sur
+      <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a>,
+      <a target="_blank" href="http://www.deezer.com/artist/7648046">Deezer</a>,
+      <a target="_blank" href="https://soundcloud.com/old-time-gringo">Soundcloud</a> et
+      <a target="_blank" href="https://itunes.apple.com/us/artist/old-time-gringo/id974765573">iTunes</a>! <br/>
+      Et comme on vous aime beaucoup, on a carrément décidé de vous l'offrir gratuitement ! <3 <br/>
+      <button class="button" type="button" onClick="window.open('https://www.mediafire.com/folder/8wbfp4367iz66/Old_Time_Gringo_-_%231_(2015)')">Télécharger</button>
+    </p>
+  </div>
+  <div class="wrap" lang="en">
+    <p>Discover the first EP of Old Time Gringo: <strong> #1 </strong><br/> Currently available on
+      <a target="_blank" href="https://play.spotify.com/artist/0AqxI9rFFYjD3KIFJ54T7E">Spotify</a>,
+      <a target="_blank" href="http://www.deezer.com/artist/7648046">Deezer</a>,
+      <a target="_blank" href="https://soundcloud.com/old-time-gringo">Soundcloud</a> et
+      <a target="_blank" href="https://itunes.apple.com/us/artist/old-time-gringo/id974765573">iTunes</a>! <br/>
+      As we really <i class="fa fa-heart"></i> you, we have decided to give you this first release for free ! <3 <br/>
+      <button class="button" type="button" onClick="window.open('https://www.mediafire.com/folder/8wbfp4367iz66/Old_Time_Gringo_-_%231_(2015)')">Download</button>
+    </p>
+  </div>
   <div id="player">
     <img src="images/coverEPmid.jpg" alt="#1">
     <iframe style="border: 0; width: 50%; height: 307px;" src="https://bandcamp.com/EmbeddedPlayer/album=3732449303/size=large/bgcol=ffffff/linkcol=25938F/artwork=none/transparent=true/" seamless><a href="http://oldtimegringo.bandcamp.com/album/1">#1 by Old Time Gringo</a></iframe>
 	</div>
-	<h5>Produit par Old Time Gringo</h5>
+	<div class="wrap" lang="fr">
+    <h5>Enregistré et produit par <strong>Old Time Gringo</strong></h5>
+  </div>
+  <div class="wrap" lang="en">
+    <h5>Record and produce exclusively by <strong>Old Time Gringo</strong></h5>
+  </div>
 </div>
 
 
 <div id="slide3">
   <div class="bio-block">
-      <h1>biographie.</h1>
+      <div class="wrap" lang="fr">
+        <h1>biographie.</h1>
         <p> <strong>Old Time Gringo</strong> est une formation d’Indie Rock/Pop formé début 2014 à Paris. Initialement empreint d’influence diverses, le groupe se concentre sur l’élaboration de compositions dynamiques aux arrangements complexes et élaborés.</p>
         <p> Fidèle au leitmotiv <i>Do it Yourself</i>, <strong>Old Time Gringo</strong> a rapidement débuté l’enregistrement d’un premier EP intitulé <a href="#slide2">#1</a> regroupant les 5 premières compositions du groupe.
           C’est en Mars 2015 que la production du disque se concrétise après avoir déjà réalisé une <a href="#slide4">dizaine de lives</a> majoritairement en Ile de France.</p>
-
+      </div>
+      <div class="wrap" lang="en">
+        <h1>biography.</h1>
+        <p> <strong>Old Time Gringo</strong> is a French Indie Rock/Pop band created in 2014 in Paris (France). Melting various inspiration and personal music tastes, the band hardly works on creating original tracks with powerful rhythm and stylish arrangements.</p>
+        <p> Extremly attached to the <i>Do it Yourself</i>, <strong>Old Time Gringo</strong> has quickly started to record its first EP named <a href="#slide2">#1</a> gathering 5 original and exclusive tracks.
+          Finally, in March 2015, the EP is finally released on the main streaming platforms like Spotify or Deezer, and the band keeps performing <a href="#slide4">several lives</a> in the Paris area.</p>
+      </div>
 	    <div class="bio-img">
     	  <img src="images/otg1.jpg">
     	  <img src="images/otg2.jpg">
@@ -108,42 +163,83 @@
 
 
 <div id="slide4" class="live-block">
-    <h1>concerts.</h1>
-    <table class="live-table" cellspacing="0" cellpadding="0">
-      <colgroup>
-        <col style="width: 20%">
-        <col style="width: 40%">
-        <col style="width: 40%">
-      </colgroup>
-      <tr>
-        <th class="live-table-titre">Date</th>
-        <th class="live-table-titre">Lieu</th>
-        <th class="live-table-titre">Information</th>
-      </tr>
-      <tr class="table-line">
-        <td class="live-table-ligne">05/03/2015</td>
-        <td class="live-table-ligne">Abracadabar, Paris (FR)</td>
-        <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/1575148922721661/" class="button live-getticket">More</a></td>
-      </tr>
+    <div class="wrap" lang="fr">
+      <h1>concerts.</h1>
+      <table class="live-table" cellspacing="0" cellpadding="0">
+        <colgroup>
+          <col style="width: 20%">
+          <col style="width: 40%">
+          <col style="width: 40%">
+        </colgroup>
+        <tr>
+          <th class="live-table-titre">Date</th>
+          <th class="live-table-titre">Lieu</th>
+          <th class="live-table-titre">Information</th>
+        </tr>
+        <tr class="table-line">
+          <td class="live-table-ligne">05/03/2015</td>
+          <td class="live-table-ligne">Abracadabar, Paris (FR)</td>
+          <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/1575148922721661/" class="button live-getticket">More</a></td>
+        </tr>
 
-      <tr class="table-line">
-        <td class="live-table-ligne">19/02/2015</td>
-        <td class="live-table-ligne">La Cantine de Belleville, Paris (FR)</td>
-        <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/820338141372361/" class="button live-getticket">More</a></td>
-      </tr>
+        <tr class="table-line">
+          <td class="live-table-ligne">19/02/2015</td>
+          <td class="live-table-ligne">La Cantine de Belleville, Paris (FR)</td>
+          <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/820338141372361/" class="button live-getticket">More</a></td>
+        </tr>
 
-      <tr class="table-line">
-        <td class="live-table-ligne">25/10/2014</td>
-        <td class="live-table-ligne">Gibus Café, Paris (FR)</td>
-        <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
-      </tr>
+        <tr class="table-line">
+          <td class="live-table-ligne">25/10/2014</td>
+          <td class="live-table-ligne">Gibus Café, Paris (FR)</td>
+          <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
+        </tr>
 
-      <tr class="table-line">
-        <td class="live-table-ligne">09/08/2014</td>
-        <td class="live-table-ligne">Lille (FR)</td>
-        <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
-      </tr>
-    </table>
+        <tr class="table-line">
+          <td class="live-table-ligne">09/08/2014</td>
+          <td class="live-table-ligne">Lille (FR)</td>
+          <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="wrap" lang="en">
+      <h1>lives.</h1>
+      <table class="live-table" cellspacing="0" cellpadding="0">
+        <colgroup>
+          <col style="width: 20%">
+          <col style="width: 40%">
+          <col style="width: 40%">
+        </colgroup>
+        <tr>
+          <th class="live-table-titre">Date</th>
+          <th class="live-table-titre">Place</th>
+          <th class="live-table-titre">Information</th>
+        </tr>
+        <tr class="table-line">
+          <td class="live-table-ligne">05/03/2015</td>
+          <td class="live-table-ligne">Abracadabar, Paris (FR)</td>
+          <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/1575148922721661/" class="button live-getticket">More</a></td>
+        </tr>
+
+        <tr class="table-line">
+          <td class="live-table-ligne">19/02/2015</td>
+          <td class="live-table-ligne">La Cantine de Belleville, Paris (FR)</td>
+          <td class="live-table-ligne"><a target="_blank" href="https://www.facebook.com/events/820338141372361/" class="button live-getticket">More</a></td>
+        </tr>
+
+        <tr class="table-line">
+          <td class="live-table-ligne">25/10/2014</td>
+          <td class="live-table-ligne">Gibus Café, Paris (FR)</td>
+          <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
+        </tr>
+
+        <tr class="table-line">
+          <td class="live-table-ligne">09/08/2014</td>
+          <td class="live-table-ligne">Lille (FR)</td>
+          <td class="live-table-ligne"><a class="button live-getticket">More</a></td>
+        </tr>
+      </table>
+    </div>
 </div>
 
 
@@ -153,29 +249,56 @@
     <div id="videoframe">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/6AKwcp3m8Bg" frameborder="0" allowfullscreen></iframe>
     </div>
-    <h5>Écrit, Créé et Réalisé par Old Time Gringo</h5>
+    <div class="wrap" lang="fr">
+      <h5>Écrit, Créé et Réalisé par <strong>Old Time Gringo</strong></h5>
+    </div>
+    <div class="wrap" lang="en">
+      <h5>Written, Created and Produced by <strong>Old Time Gringo</strong></h5>
+    </div>
 </div> <!--end container-->
 
 
 <div id="slide6" class="newsletter-block">
-  <h1>contact.</h1>
-  <p> Pour toute demande, n'hésitez pas à nous envoyer un message en utilisant le formulaire ci-dessous.
-  <br/> On sera ravi de vous répondre !</p>
+  <div class="wrap" lang="fr">
+    <h1>contact.</h1>
+    <p> Pour toute demande, n'hésitez pas à nous envoyer un message en utilisant le formulaire ci-dessous.
+    <br/> On sera ravi de vous répondre !</p>
 
-  <form id ="form" role="form">
-    <input name="inputName" id="inputName" type="text" class="feedback-input" placeholder="Nom" />
-    <input name="inputEmail" id="inputEmail" type="text" class="feedback-input" placeholder="Email" />
-    <select name="inputSubject" id="inputSubject" class="feedback-input" placeholder="Statut">
-      <option>Presse</option>
-      <option>Booking</option>
-      <option>Autre</option>
-    </select>
-    <textarea name="inputMessage" class="feedback-input" placeholder="Message"></textarea>
-    <input id="submitmsg" id="inputMessage" type="submit" value="Envoyer"/>
-    <div id="confirm">
-      <i class="fa fa-check-circle fa-1x"></i>  Message envoyé avec succès
-    </div>
-  </form>
+    <form id ="form" role="form">
+      <input name="inputName" id="inputName" type="text" class="feedback-input" placeholder="Nom" />
+      <input name="inputEmail" id="inputEmail" type="text" class="feedback-input" placeholder="Email" />
+      <select name="inputSubject" id="inputSubject" class="feedback-input" placeholder="Statut">
+        <option>Presse</option>
+        <option>Booking</option>
+        <option>Autre</option>
+      </select>
+      <textarea name="inputMessage" class="feedback-input" placeholder="Message"></textarea>
+      <input id="submitmsg" id="inputMessage" type="submit" value="Envoyer"/>
+      <div id="confirm">
+        <i class="fa fa-check-circle fa-1x"></i>  Message envoyé avec succès
+      </div>
+    </form>
+  </div>
+  <div class="wrap" lang="en">
+    <h1>contact.</h1>
+    <p> Should you have any question, please do not hesitate to contact us directly by using the form below.
+    <br/> We would be please to answer !</p>
+
+    <form id ="form" role="form">
+      <input name="inputName" id="inputName" type="text" class="feedback-input" placeholder="Name" />
+      <input name="inputEmail" id="inputEmail" type="text" class="feedback-input" placeholder="Email" />
+      <select name="inputSubject" id="inputSubject" class="feedback-input" placeholder="Statut">
+        <option>Article</option>
+        <option>Booking</option>
+        <option>Other</option>
+      </select>
+      <textarea name="inputMessage" class="feedback-input" placeholder="Message"></textarea>
+      <input id="submitmsg" id="inputMessage" type="submit" value="Send"/>
+      <div id="confirm">
+        <i class="fa fa-check-circle fa-1x"></i>  Your message has been sent !
+      </div>
+    </form>
+  </div>
 </div>
 
 
@@ -222,27 +345,6 @@ $(document).ready(function () {
   });
 });
 </script>
-
-<!--<script>
-$(function () {
-    $('form').on('submit', function (e) {
-          $('#submitmsg').css({"background":"#333333"})
-          e.preventDefault();
-
-          $.ajax({
-          type: 'post',
-          url: 'http://oldtimegringo.free.fr/mail.php',
-          data: $('form').serialize(),
-          success: function () {
-            $('#form')[0].reset();
-            $('#confirm').show();
-            $('#submitmsg').css({"background":"#7D934C"});
-            $('#confirm').delay(2000).fadeOut(1000);
-          }
-        });
-      });
-  });
-</script>-->
 
 </body>
 </html>
