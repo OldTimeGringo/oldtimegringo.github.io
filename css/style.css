@@ -13,6 +13,8 @@
     src: url(Fonts/RNS_Camelia.otf);
 }
 
+
+
 #homepage {
 
 padding: 0px;
@@ -41,8 +43,8 @@ margin: 0px 0px;
 
 p {font-size: 21px; line-height: 30px; padding-left: 15%; padding-right: 10%;}
 h1 {text-align: left; padding-top: 50px; padding-left: 15%; font-size: 65px;}
-h4 {font-size: 24px; color: #fff; font-weight: bold; text-align: center;}
-h5 {font-size: 12px; text-align: center;}
+h2 {font-size: 24px; color: #fff; font-weight: bold; text-align: center;}
+h3 {font-size: 12px; text-align: center;}
 
 #header{ text-align:center; width:100%; min-height:660px; padding: 60px 0px 50px 0px;}
 #headerContainer{padding: 20px 0px 50px 0px; -webkit-transition: background-color 0.2s ease-in-out; -moz-transition: background-color 0.2s ease-in-out; -o-transition: background-color 0.2s ease-in-out; transition: background-color 0.2s ease-in-out;}
